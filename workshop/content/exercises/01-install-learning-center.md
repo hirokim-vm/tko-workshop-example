@@ -46,20 +46,6 @@ function tap-nudge() {
 tap-nudge tap
 ```
 
-#### Variable interpolation
-
-workshop_name: {{ workshop_name }}
-
-session_namespace: {{ session_namespace }}
-
-workshop_namespace: {{ workshop_namespace }}
-
-training_portal: {{ training_portal }}
-
-ingress_domain: {{ ingress_domain }}
-
-ingress_protocol: {{ ingress_protocol }}
-
 #### References
 
 [Install Learning Center](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-learning-center-install-learning-center.html)
