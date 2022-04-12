@@ -1,9 +1,0 @@
-site_name: "tanzu-workshop-example"
-site_description: "Test Tanzu Learning Center"
-edit_uri: edit/main/docs/
-
-nav:
-  - Introduction: index.md
-
-plugins:
-  - techdocs-core

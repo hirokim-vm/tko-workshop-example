@@ -1,0 +1,13 @@
+apiVersion: training.eduk8s.io/v1alpha1
+kind: TrainingPortal
+metadata:
+  name: tanzu-workshop-example
+spec:
+  portal:
+    registration:
+      type: anonymous
+  workshops:
+  - name: tanzu-workshop-example
+    capacity: 1
+    expires: 60m
+    orphaned: 5m

@@ -1,28 +1,26 @@
-## tanzu-workshop-example
+Tanzu Workshop Example
+======================
 
-Please edit this file as you see fit. This is a sample TechDocs application created by https://developer.mckesson.com
+Sample workshop content using Markdown formatting for pages based on "LAB - Markdown Sample"
 
-This will deploy a sample app into dev `GKE/US` under the `developer-portal-sandbox-dev` namespace.
+If you already have the Tanzu Learning Center installed and configured, to
+deploy and view this sample workshop, run:
 
-In order to deploy into prod, you must create a GitHub Environment with relevant secrets.
+```bash
+kubectl apply -f https://raw.githubusercontent.com/mckesson/tanzu-workshop-example/master/resources/workshop.yaml
+kubectl apply -f https://raw.githubusercontent.com/mckesson/tanzu-workshop-example/master/resources/training-portal.yaml
+```
 
-# Getting Started
+This will deploy a training portal hosting just this workshop. To get the
+URL for accessing the training portal run:
 
-This application uses [GitHub Actions](https://docs.github.com/en/actions) and [GitHub Environments](https://docs.github.com/en/actions/reference/environments) to deploy into Kubernetes.
+```bash
+kubectl get trainingportal/tanzu-workshop-example
+```
 
-GitHub Environments with populated secrets must be created.
+The training portal is configured to allow anonymous access. For your own
+workshop content you should consider removing anonymous access.
 
-Please follow all `TODO`'s in the manifest files in order to deploy to desired cluster and namespace. Please read the following markdown files before you continue.
+## References
 
-- [PIPELINE.md](template-docs/PIPELINE.md)
-
-- [SECRETS.md](template-docs/SECRETS.md)
-
-- [DEPLOY.md](template-docs/DEPLOY.md)
-
-### Reference Documentation
-
-For further reference, please consider the following sections:
-
-- [TechDocs documentation](https://backstage.io/docs/features/techdocs/techdocs-overview)
-
+[LAB - Markdown Sample](https://github.com/eduk8s/lab-markdown-sample)
