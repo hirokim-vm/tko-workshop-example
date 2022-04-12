@@ -46,10 +46,6 @@ function tap-nudge() {
 tap-nudge tap
 ```
 
-```execute
-<ctrl-c>
-```
-
 #### Variable interpolation
 
 workshop_name: {{ workshop_name }}
