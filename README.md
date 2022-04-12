@@ -7,8 +7,8 @@ If you already have the Tanzu Learning Center installed and configured, to
 deploy and view this sample workshop, run:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/mckesson/tanzu-workshop-example/master/resources/workshop.yaml
-kubectl apply -f https://raw.githubusercontent.com/mckesson/tanzu-workshop-example/master/resources/training-portal.yaml
+kubectl apply -f resources/workshop.yaml
+kubectl apply -f resources/training-portal.yaml
 ```
 
 This will deploy a training portal hosting just this workshop. To get the
