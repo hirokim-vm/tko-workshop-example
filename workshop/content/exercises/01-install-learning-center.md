@@ -30,7 +30,7 @@ learningcenter:
 #### Install lerning center by updating TAP
 
 ```execute
-tanzu package installed update tap -p tap.tanzu.vmware.com -v "1.0.3" --values-file tap-values.yml -n tap-install
+tanzu package installed update tap -p tap.tanzu.vmware.com -v 1.0.3 --values-file tap-values.yml -n tap-install
 ```
 
 #### Install the Self-Guided Tour Training Portal and Workshop
