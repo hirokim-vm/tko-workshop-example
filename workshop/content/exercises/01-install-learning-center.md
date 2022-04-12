@@ -36,7 +36,6 @@ tanzu package installed update tap -p tap.tanzu.vmware.com -v "1.0.3" --values-f
 #### Install the Self-Guided Tour Training Portal and Workshop
 
 ```execute
-tanzu package available list workshops.learningcenter.tanzu.vmware.com --namespace tap-install
 tanzu package install learning-center-workshop --package-name workshops.learningcenter.tanzu.vmware.com --version 0.1.1 -n tap-install
 ```
 
