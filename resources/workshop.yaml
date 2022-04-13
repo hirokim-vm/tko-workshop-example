@@ -11,7 +11,7 @@ spec:
   url: https://github.com/mckesson/tanzu-workshop-example
   content:
     #image: mck-tech-platform-srvs.jfrog.io/tanzu-workshop-example:main
-    files: github.com/mckesson/tanzu-workshop-example
+    files: github.com/mckesson/tanzu-workshop-example?ref=main
   session:
     namespaces:
       budget: small
