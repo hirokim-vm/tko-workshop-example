@@ -16,8 +16,8 @@ tanzu package available list workshops.learningcenter.tanzu.vmware.com --namespa
 #### See all the configurable parameters on this package by running
 
 ```execute
-tanzu package available get learningcenter.tanzu.vmware.com/0.1.1 --values-schema --namespace tap-install
-tanzu package available get workshops.learningcenter.tanzu.vmware.com/0.1.1 --values-schema --namespace tap-install
+tanzu package available get learningcenter.tanzu.vmware.com/0.2.0 --values-schema --namespace tap-install
+tanzu package available get workshops.learningcenter.tanzu.vmware.com/0.2.0 --values-schema --namespace tap-install
 ```
 
 #### Add the parameter ingressDomain to tap-values.yaml
