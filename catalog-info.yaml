@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "tanzu-workshop-example"
-  description: Skeleton TechDocs project using MkDocs and GitHub Actions CI/CD (Gated). 
+  description: A workshop example of Tanzu Application Platform (TAP) 
   annotations:
     github.com/project-slug: mckesson/tanzu-workshop-example
     backstage.io/techdocs-ref: 'dir:.'
