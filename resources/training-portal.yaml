@@ -8,6 +8,6 @@ spec:
       type: anonymous
   workshops:
   - name: tanzu-workshop-example
-    capacity: 1
-    expires: 60m
+    capacity: 3
+    expires: 10m
     orphaned: 5m
