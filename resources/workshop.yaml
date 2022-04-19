@@ -18,7 +18,7 @@ spec:
     applications:
       terminal:
         enabled: true
-        layout: split
+        # layout: split
       console:
         enabled: true
       editor:
