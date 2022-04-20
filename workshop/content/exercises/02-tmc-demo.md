@@ -1,4 +1,4 @@
-### Manage multiple clusters with VMWare Tanzu Miission Control
+#### Manage multiple clusters with VMWare Tanzu Miission Control
 
 #### Step 1: Login VMware Cloud Service
 
