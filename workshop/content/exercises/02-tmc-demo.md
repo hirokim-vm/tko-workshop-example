@@ -1,15 +1,15 @@
-# Manage multiple clusters with VMWare Tanzu Miission Control
+### Manage multiple clusters with VMWare Tanzu Miission Control
 
-## Step 1: Login VMware Cloud Service
+#### Step 1: Login VMware Cloud Service
 
 - Open a broswer with "https://console.cloud.vmware.com/".
 - Sign in with McKesson UAT OKTA.
 
-## Step 2: Launch VMware Tanzu Mission Control
+#### Step 2: Launch VMware Tanzu Mission Control
 
 - Click the link of `LAUNCH SERVICE` inside the pane of "__VMware Tanzu Mission Control__"
 
-## Step 3: Create a cluster group: sandbox
+#### Step 3: Create a cluster group: sandbox
 
 - Click `Cluster Groups` at left side.
 - Click the button of `CREATE CLUSTER GROUP`.
@@ -17,9 +17,9 @@
 - Enter "__Group of test clusters__" in the field of `Description (optional)`.
 - Click the button of `CREATE`.
 
-## Step 4: Attach two clusters: aks-westus-test and gke-uswest1-test
+#### Step 4: Attach two clusters: aks-westus-test and gke-uswest1-test
 
-Attach cluster "__gke-uswest1-test__" as follows:
+Attach cluster "__aks-westus-test__" as follows:
 
 - Click `Clusters` at left side.
 - Click `ATTACH CLUSTER` button.
@@ -28,7 +28,7 @@ Attach cluster "__gke-uswest1-test__" as follows:
 - Enter "__aks sandbox__" in the field `Description (optional)`.
 - Click `Next`.
 - Click `Next`.
-- Copy the command and run it in terminal 1.
+- Copy the command and run it in the context of `aks-westus-test`.
 
 ```
 # sample command
@@ -47,7 +47,7 @@ Repeat above steps to attach cluster "__gke-uswest1-test__":
 - Enter "__gke sandbox__" in the field `Description (optional)`.
 - Click `Next`.
 - Click `Next`.
-- Copy the command and run it in terminal 2.
+- Copy the command and run it in the context of `gke-uswest1-test`.
 
 ```
 # sample command
@@ -57,7 +57,7 @@ kubectl create -f "https://mckesson.tmc.cloud.vmware.com/installer?id=17c1e18cc3
 - Wait for a minute.
 - Click `VERIFY CONNECTION`.
 
-## Step 5: Create four workspaces: medium, small, registry, and network
+#### Step 5: Create four workspaces: medium, small, registry, and network
 
 Create workspace "__medium__" as follows:
 
@@ -91,7 +91,7 @@ Create workspace "__network__" as follows:
 - Enter "__Workspace for network policy__" in the field `Description (optional)`.
 - Click `CREATE`.
 
-## Step 6: Create an Access policy
+#### Step 6: Create an Access policy
 
 "Access policies allow you to use predefined roles to specify which identities (individuals and groups) have what level of access to a given resource."
 
@@ -108,23 +108,17 @@ Create a Rolebinding of the role "Cluster.view" for clustre group `sandbox`:
 - Click `SAVE`.
 - Check aks-westus-test
 
-```execute-1
+```execute
 k get rolebinding -A|grep sandbox
 ```
 
-- Check gke-uswest1-test
-
-```execute-2
-k get rolebinding -A|grep sandbox
-```
-
-## Step 7: Create an Image registry policy
+#### Step 7: Create an Image registry policy
 
 "Image registry policies allow you to specify the source registries from which an image can be pulled."
 
 - Create namespace "__tmc-demo__" in `aks-westus-test`.
 
-```execute-1
+```execute
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Namespace
@@ -135,18 +129,7 @@ metadata:
 EOF
 ```
 
-- Create namespace "__tmc-demo__" in `gke-uswest1-test`.
-
-```execute-2
-cat <<EOF | kubectl apply -f -
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: tmc-demo
-  labels:
-    registry: platform
-EOF
-```
+- Create namespace "__tmc-demo-labels__" in `aks-westus-test`.
 
 ```
 cat <<EOF | kubectl apply -f -
@@ -185,17 +168,17 @@ Create an image registry policy to prevent applications in namespace `tmc-demo` 
 
 Try to create a pod with nginx image from Docker hub on aks-westus-test:
 
-```execute-1
+```execute
 k -n tmc-demo run nginx --image nginx
 ```
 
 Try to create a pod with nginx image from Docker hub on gke-uswest1-test:
 
-```execute-1
+```execute
 k -n tmc-demo run nginx --image nginx
 ```
 
-## Step 8: Create a Network policy
+#### Step 8: Create a Network policy
 
 "Network policies allow you to use preconfigured templates to define how pods communicate with each other and other network endpoints."
 
@@ -203,7 +186,7 @@ Create a `deny-all-to-pods policy`, "__deny-all-to-pods-tmc-demo__", with `Pod s
 
 - Create namespace "__tmc-demo-np__" in `aks-westus-test`.
 
-```execute-1
+```execute
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Namespace
@@ -216,7 +199,7 @@ EOF
 
 - Create namespace "__tmc-demo-np__" in `gke-uswest1-test`.
 
-```execute-2
+```copy
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Namespace
@@ -229,7 +212,7 @@ EOF
 
 - Attach `tmc-demo-np` to workspace group `network`.
 
-```execute-1
+```execute
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: Pod
@@ -254,14 +237,14 @@ spec:
 EOF
 ```
 
-## Step 9: Create a Security policy
+#### Step 9: Create a Security policy
 
 "Security policies allow you to manage the security context in which deployed pods operate in your clusters by imposing constraints on your clusters that define what pods can do and which resources they have access to."
 
-## Step 10: Create a Quota policy
+#### Step 10: Create a Quota policy
 
 "Quota policies allow you to constrain the resources used in your clusters, as aggregate quantities across specified namespaces, using preconfigured and custom templates."
 
-## Step 11: Create a Custom policy
+#### Step 11: Create a Custom policy
 
 "Custom policies allow you to implement additional business rules, using templates that you define, to enforce policies that are not already addressed using the other built-in policy types."

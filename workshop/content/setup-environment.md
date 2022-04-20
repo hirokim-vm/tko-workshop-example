@@ -1,14 +1,14 @@
-Run following command seting up kubecontext to work with aks-westus-test:
+Run following command seting up kubecontext to work with aks-westus-test if needed:
 
-```execute-1
+```Copy
 az login
 az account set --subscription ebfbcf35-035c-48a7-a8e2-bc70bd1ef972
 az aks get-credentials --resource-group rg-aks-westus-test --name aks-westus-test --admin --overwrite-existing
 ```
 
-Run following command seting up kubecontext to work with gke-uswest1-test:
+Run following command seting up kubecontext to work with gke-uswest1-test if needed:
 
-```execute-2
+```Copy
 gcloud auth login
 
 gcloud config set project gke-uswest1-test-1524
