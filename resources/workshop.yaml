@@ -19,7 +19,7 @@ spec:
     applications:
       terminal:
         enabled: true
-        # layout: default
+        layout: default
       console:
         enabled: false
       editor:
