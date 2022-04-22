@@ -1,8 +1,13 @@
-.DS_Store
-values.yaml
-tanzu-framework-linux-amd64.tar
-*.pem
-### IntelliJ IDEA ###
-.idea
-### VS Code ###
-.vscode/
+.cache
+.config
+.docker
+.bash_history
+.gitconfig
+.kube
+.lesshst
+.local
+.ssh
+.theia
+.webdav
+.yarn
+*.swp

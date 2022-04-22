@@ -1,14 +1,9 @@
-name: Carvel Workshop Examples
+name: Workshop Example
+
 modules:
-  activate:
+    activate:
     - workshop-overview
-    - exercises/Ytt
-    - exercises/Kbld-imgpkg-vendir
-    - exercises/Kapp
-    - exercises/Kapp-Secret-Controller
-    - exercises/Cluster-Essentials
-    - exercises/Secret-Controller
-    - exercises/Kapp-Controller
-    - exercises/Packages
-    - exercises/Prepare-Install
+    - setup-environment
+    - exercises/01-install-learning-center
+    - exercises/02-tmc-demo
     - workshop-summary
