@@ -25,7 +25,7 @@ spec:
       editor:
         enabled: true
       docker:
-        enabled: true
+        enabled: false
         storage: 1Gi
     env: 
     - name: TAP_PRODUCT_DOCS_BASE_URL
