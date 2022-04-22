@@ -15,7 +15,7 @@ spec:
     files: github.com/mckesson/tanzu-workshop-example?ref=tap-carvel-workshop
   session:
     namespaces:
-      budget: small
+      budget: medium
     applications:
       terminal:
         enabled: true
@@ -25,7 +25,7 @@ spec:
       editor:
         enabled: true
       docker:
-        enabled: true
+        enabled: false
         storage: 1Gi
     env: 
     - name: TAP_PRODUCT_DOCS_BASE_URL
