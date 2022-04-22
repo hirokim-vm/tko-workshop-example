@@ -12,7 +12,7 @@ spec:
     updates:
       workshop: true
     sessions:
-      maximum: 2
+      maximum: 6
     reserved: 1
   workshops:
     - name: tap-carvel-workshop
