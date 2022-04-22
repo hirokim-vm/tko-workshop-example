@@ -3,6 +3,8 @@ Tanzu Workshop Example
 
 Sample workshop content using Markdown formatting for pages based on "LAB - Markdown Sample"
 
+The contents of interactive workshop are copied from "https://github.com/tsalm-pivotal/tap-carvel-workshop".
+
 If you already have the Tanzu Learning Center installed and configured, to
 deploy and view this sample workshop, run:
 
@@ -25,3 +27,5 @@ workshop content you should consider removing anonymous access.
 ## References
 
 [LAB - Markdown Sample](https://github.com/eduk8s/lab-markdown-sample)
+
+[Carvel self-paced learning workshop for the installation of TAP](https://github.com/tsalm-pivotal/tap-carvel-workshop)

@@ -1,3 +1,6 @@
+**
+!tanzu-framework-linux-amd64.tar
+!mck-ca.pem
 .dockerignore
 .eduk8signore
 .git

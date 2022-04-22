@@ -1,4 +1,3 @@
-After we finished those two exercises, we have learned how to:
+The goal of this workshop was to get familiar with all the tools **Carvel** provides and how they are used for the installation of VMware Tanzu Application Platform.
 
-- Installation of Learning Center
-- Manage multiple clusters with TMC
+Feel free to reach out to me (Timo Salm) for feedback and don't hesitate to contribute to it -> https://github.com/tsalm-pivotal/tap-carvel-workshop
