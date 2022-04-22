@@ -9,6 +9,7 @@ deploy and view this sample workshop, run:
 ```bash
 kubectl apply -f resources/workshop.yaml
 kubectl apply -f resources/training-portal.yaml
+kubectl delete pod -l deployment=learningcenter-operator -n learningcenter
 ```
 
 This will deploy a training portal hosting just this workshop. To get the

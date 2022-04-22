@@ -14,12 +14,12 @@ spec:
     files: github.com/mckesson/tanzu-workshop-example?ref=main
   session:
     namespaces:
-      budget: medium
-      role: edit
+      budget: small
+      # role: edit
     applications:
       terminal:
         enabled: true
-        layout: default
+        layout: split
       console:
         enabled: false
       editor:
