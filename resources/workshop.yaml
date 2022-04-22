@@ -12,7 +12,7 @@ spec:
   duration: 90m
   url: https://github.com/mckesson/tanzu-workshop-example
   content:
-    files: github.com/mckesson/tanzu-workshop-example?ref=main
+    files: github.com/mckesson/tanzu-workshop-example?ref=tap-carvel-workshop
   session:
     namespaces:
       budget: small
