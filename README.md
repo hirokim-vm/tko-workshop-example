@@ -1,31 +1,27 @@
-Tanzu Workshop Example
-======================
+# Carvel self-paced learning workshop for the installation of TAP
 
-Sample workshop content using Markdown formatting for pages based on "LAB - Markdown Sample"
+A [Learning Center for VMware Tanzu](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-learning-center-about.html) workshop for self-paced learning of all the tools Carvel provides for the installation of TAP
 
-The contents of interactive workshop are copied from "https://github.com/tsalm-pivotal/tap-carvel-workshop".
+## Workshop installation
+Download the Tanzu CLI for Linux from https://network.tanzu.vmware.com/products/tanzu-application-platform to the root of the directory.
+Create a public project called **tap-workshop** and private project called **tap-carvel-workshop-examples** in your registry instance. 
 
-If you already have the Tanzu Learning Center installed and configured, to
-deploy and view this sample workshop, run:
-
-```bash
-kubectl apply -f resources/workshop.yaml
-kubectl apply -f resources/training-portal.yaml
-kubectl delete pod -l deployment=learningcenter-operator -n learningcenter
+There is a Dockerfile in the root directory of this repo. From that root directory, build a Docker image and push it to the project you created:
+```
+docker build . -t <your-registry-hostname>/tap-workshop/tap-carvel-workshop
+docker push <your-registry-hostname>/tap-workshop/tap-carvel-workshop
 ```
 
-This will deploy a training portal hosting just this workshop. To get the
-URL for accessing the training portal run:
-
-```bash
-kubectl get trainingportal/tanzu-workshop-example
+Copy values-example.yaml to values.yaml and set configuration values
+```
+cp values-example.yaml values.yaml
+```
+Run the installation script.
+```
+./install.sh
 ```
 
-The training portal is configured to allow anonymous access. For your own
-workshop content you should consider removing anonymous access.
-
-## References
-
-[LAB - Markdown Sample](https://github.com/eduk8s/lab-markdown-sample)
-
-[Carvel self-paced learning workshop for the installation of TAP](https://github.com/tsalm-pivotal/tap-carvel-workshop)
+## Debug
+```
+kubectl logs -l deployment=learningcenter-operator -n learningcenter
+```
