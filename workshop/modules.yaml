@@ -1,14 +1,10 @@
 modules:
     workshop-overview:
         name: Workshop Overview
-        exit_sign: Setup Environment
-    setup-environment:
-        name: Setup Environment
-        exit_sign: Start Workshop
-    # exercises/01-install-learning-center:
-    #     name: Install Learning Center
-    exercises/02-tmc-demo:
+        exit_sign: Demonstrate Tanzu Mission Control
+    exercises/tmc-demo:
         name: Demonstrate Tanzu Mission Control
+        exit_sign: Workshop Summary
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop

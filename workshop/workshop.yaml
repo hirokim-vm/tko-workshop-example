@@ -3,7 +3,5 @@ name: Workshop Example
 modules:
     activate:
     - workshop-overview
-    - setup-environment
-    # - exercises/01-install-learning-center
-    - exercises/02-tmc-demo
+    - exercises/tmc-demo
     - workshop-summary
