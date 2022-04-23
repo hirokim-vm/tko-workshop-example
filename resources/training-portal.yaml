@@ -17,4 +17,4 @@ spec:
   workshops:
     - name: tap-carvel-workshop
       expires: 90m
-      orphaned: 90m
+      orphaned: 10m
