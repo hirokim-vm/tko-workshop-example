@@ -1,7 +1,7 @@
-name: Workshop Example
+name: TKO E2Eデモ Example
 
 modules:
     activate:
-    - workshop-overview
-    - exercises/tmc-demo
+    - TKOとは
+    - exercises/tko-demo
     - workshop-summary
