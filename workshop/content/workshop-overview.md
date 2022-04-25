@@ -1,3 +1,3 @@
-Use Tanzu learning Center to demonstrate following tasks:
+TKOの価値とは？:
 
-- Manage multiple clusters with TMC
+- TKOのコンポーネントは複数で構成されています。
