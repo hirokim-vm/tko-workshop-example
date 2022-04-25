@@ -1,7 +1,7 @@
-name: TKO E2Eデモ Example
+name: TKO E2E Example
 
 modules:
     activate:
-    - TKOとは
+    - TKO Overview
     - exercises/tko-demo
     - workshop-summary
