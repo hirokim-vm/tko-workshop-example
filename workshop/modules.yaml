@@ -1,8 +1,8 @@
 modules:
-    workshop-overview:
-        name: TKOとは
+    TKO-overview:
+        name: TKO
         exit_sign: Demonstrate TKO
-    exercises/tmc-demo:
+    exercises/tko-demo:
         name: Demonstrate TKO
         exit_sign: Workshop Summary
     workshop-summary:
