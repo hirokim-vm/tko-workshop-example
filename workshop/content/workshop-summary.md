@@ -1,3 +1,3 @@
-After we finished those two exercises, we have learned how to:
+最後に:
 
 - Manage multiple clusters with TMC
