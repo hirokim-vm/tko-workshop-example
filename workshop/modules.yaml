@@ -1,9 +1,9 @@
 modules:
     workshop-overview:
-        name: Workshop Overview
-        exit_sign: Demonstrate Tanzu Mission Control
+        name: TKOとは
+        exit_sign: Demonstrate TKO
     exercises/tmc-demo:
-        name: Demonstrate Tanzu Mission Control
+        name: Demonstrate TKO
         exit_sign: Workshop Summary
     workshop-summary:
         name: Workshop Summary
