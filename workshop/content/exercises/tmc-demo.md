@@ -1,4 +1,4 @@
-#### Manage multiple clusters with VMWare Tanzu Miission Control
+#### TKOのコンポーネントを立ち上げる
 
 #### Step 1: Login VMware Cloud Service
 
