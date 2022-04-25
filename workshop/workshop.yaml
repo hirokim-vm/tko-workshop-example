@@ -2,6 +2,6 @@ name: TKO E2E Example
 
 modules:
     activate:
-    - TKO Overview
+    - TKO-overview
     - exercises/tko-demo
     - workshop-summary
